@@ -1,0 +1,55 @@
+/* file: globals.css */
+@import "tailwindcss";
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 135deg;
+  inherits: false;
+}
+
+@font-palette-values --brand-palette {
+  font-family: Nabla;
+  override-colors: 0 #0398fc, 1 #60b3ef, 2 #5aaded, 3 #c5e1f5, 4 #60b3ef,
+    5 #0398fc, 6 #0398fc, 7 #5aaded, 8 #60b3ef, 9 #c5e1f5;
+}
+
+:root {
+  --background: #111014;
+  --foreground: #ffffff;
+  --brand: #0398fc;
+  --brand-secondary: #5aaded;
+}
+
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-brand: var(--brand);
+  --color-brand-secondary: var(--brand-secondary);
+
+  --font-family-sans: var(--font-opensans), sans-serif;
+  --font-family-future: var(--font-nabla), system-ui;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-family-sans);
+}
+
+.font-nabla {
+  font-family: var(--font-nabla);
+  font-palette: --brand-palette;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--brand);
+  border-radius: 4px;
+}
